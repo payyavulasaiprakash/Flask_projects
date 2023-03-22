@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note_Taking_App_Notes_addition</title>
+</head>
+<body>
+    <form action="{{ url_for('index',user_name=user_name) }}" method=post>
+        <input type="text" name="note" placeholder="Enter a note">
+        <button>Add Note</button>
+    </form>
+    <h1>Welcome {{user_name}}</h1>
+    <h2>Your Notes</h2>
+    <ul>
+    {% for note in notes%}
+        {% if note == None or note == ''%}
+            <li>Please write a appropriate note</li>
+        {% else %}
+            <li>{{ note }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</body>
+</html>

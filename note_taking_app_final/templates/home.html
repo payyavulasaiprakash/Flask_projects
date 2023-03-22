@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note_Taking_App_HomePage</title>
+</head>
+<body>
+    <form action="{{ url_for('home') }}" method="post">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">User_name</label>
+          <input type="text" name="user_name" class="form-control" id="exampleInputEmail1" placeholder="Enter User Name" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-primary">Add User</button>
+    </form>
+</body>
+</html>
