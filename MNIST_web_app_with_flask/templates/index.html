@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Handwritten Digit Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <h1>Handwritten Digit Classification</h1>
+    <label id="image-upload-label" for="image-input">Upload Image</label>
+    <input type="file" id="image-input" accept="image/*">
+    <button id="predict-btn">Predict</button>
+    <p id="prediction"></p>
+    <p id="error"></p>
+    <img id="uploaded-image" src="" alt="Uploaded Image" style="display: none;">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
